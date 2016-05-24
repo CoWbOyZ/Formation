@@ -41,7 +41,7 @@ public class Geometric {
 		System.out.println(getEmptyCircle(11));
 	}
 
-	private static String getEmptyCircle(int i) {
+	public static String getEmptyCircle(int i) {
 		String circle = "";
 		int i1 = (i-1)/2;
 		int j2 = 1;
@@ -66,7 +66,7 @@ public class Geometric {
 
 	}
 
-	private static String getFullCircle(int i) {
+	public static String getFullCircle(int i) {
 		String circle = "";
 		int i1 = (i-1)/2;
 		int j2 = 1;
@@ -85,11 +85,11 @@ public class Geometric {
 		return circle;
 	}
 
-	private static String getEmptySquare(int i) {
+	public static String getEmptySquare(int i) {
 		return getEmptyRectangle(i, i);
 	}
 
-	private static String getFullSquare(int i) {
+	public static String getFullSquare(int i) {
 		String fullSquare = "";
 		for (int j = 0; j < i; j++) {
 			fullSquare += retournerLigne(i,"x");
@@ -97,7 +97,7 @@ public class Geometric {
 		return fullSquare;
 	}
 
-	private static String getIter(int i) {
+	public static String getIter(int i) {
 		if (i%2 == 0) {
 			return "erreur, le nombre doit etre impair";
 		} else {
@@ -117,7 +117,7 @@ public class Geometric {
 
 	}
 
-	private static String getRec(int i) {
+	public static String getRec(int i) {
 		String triangle = "";
 		for (int j = 0; j < i; j++) {
 			triangle += getSpaceLine(j,i-j);
@@ -126,7 +126,7 @@ public class Geometric {
 		return triangle;
 	}
 
-	private static String getEmptyRectangle(int h, int l) {
+	public static String getEmptyRectangle(int h, int l) {
 		String rectangle = "";
 		for (int i = 0; i < h; i++) {
 			if (i == 0 || i == h-1) {
@@ -140,7 +140,7 @@ public class Geometric {
 		return rectangle;
 	}
 
-	private static String getSpaceLine(int i, int j) {
+	public static String getSpaceLine(int i, int j) {
 		String spaceLine = "";
 		for (int k = 0; k < i; k++) {
 			spaceLine += " ";
@@ -151,7 +151,7 @@ public class Geometric {
 		return spaceLine;
 	}
 
-	private static String getRectangle(int h, int l) {
+	public static String getRectangle(int h, int l) {
 		String rectangle = "";
 		for (int j2 = 0; j2 < h; j2++) {
 			rectangle += getStarLine(l);
@@ -161,7 +161,7 @@ public class Geometric {
 
 	}
 
-	private static String getTriangle(int i) {
+	public static String getTriangle(int i) {
 		String dessin = "";
 		for (int j = 0; j < i; j++) {
 			dessin += getStarLine(j+1);
@@ -170,7 +170,7 @@ public class Geometric {
 		return dessin;
 	}
 
-	private static void displayTriangle8() {
+	public static void displayTriangle8() {
 		String dessin = "x";
 		for (int i = 0; i < 8; i++) {
 			System.out.println(dessin);
@@ -178,15 +178,15 @@ public class Geometric {
 		}		
 	}
 
-	private static String retournerLigne(int i, String string) {
+	public static String retournerLigne(int i, String string) {
 		return getXLine(i, string) + "\n";
 	}
 
-	private static String retournerTrait(int i) {
+	public static String retournerTrait(int i) {
 		return getXLine(i,"x");
 	}
 
-	private static String getXLine(int i, String string) {
+	public static String getXLine(int i, String string) {
 		String line ="";
 		for (int j = 0; j < i; j++) {
 			line += string;
@@ -194,7 +194,7 @@ public class Geometric {
 		return line;
 	}
 
-	private static void printNTimesX(int i, String string) {
+	public static void printNTimesX(int i, String string) {
 		String line ="";
 		for (int j = 0; j < i; j++) {
 			line += string;
@@ -202,11 +202,11 @@ public class Geometric {
 		System.out.println(line);
 	}
 
-	private static void backToTheLine() {
-		System.out.println("");
+	public static String backToTheLine() {
+		return "\n";
 	}
 
-	private static String getStarLine(int i) {
+	public static String getStarLine(int i) {
 		String starLine = "";
 		for (int j = 0; j < i; j++) {
 			starLine += "*";
@@ -214,7 +214,7 @@ public class Geometric {
 		return starLine;
 	}
 
-	private static void nStarLine(int i) {
+	public static void nStarLine(int i) {
 		for (int j = 0; j < i; j++) {
 			System.out.print("*");	
 		}
